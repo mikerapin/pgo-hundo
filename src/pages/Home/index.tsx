@@ -1,39 +1,47 @@
-import preactLogo from '../../assets/preact.svg';
 import './style.css';
+import { getEvents } from '../../hooks/getEvents';
+import { useEffect, useState } from 'preact/hooks';
+import * as pokeApi from 'pokeapi-js-wrapper';
 
 export function Home() {
-	return (
-		<div class="home">
-			<a href="https://preactjs.com" target="_blank">
-				<img src={preactLogo} alt="Preact logo" height="160" width="160" />
-			</a>
-			<h1>Get Started building Vite-powered Preact Apps </h1>
-			<section>
-				<Resource
-					title="Learn Preact"
-					description="If you're new to Preact, try the interactive tutorial to learn important concepts"
-					href="https://preactjs.com/tutorial"
-				/>
-				<Resource
-					title="Differences to React"
-					description="If you're coming from React, you may want to check out our docs to see where Preact differs"
-					href="https://preactjs.com/guide/v10/differences-to-react"
-				/>
-				<Resource
-					title="Learn Vite"
-					description="To learn more about Vite and how you can customize it to fit your needs, take a look at their excellent documentation"
-					href="https://vitejs.dev"
-				/>
-			</section>
-		</div>
-	);
-}
+  const Pokedex = new pokeApi.Pokedex({ cache: true });
+  const { events } = getEvents();
+  const currentTime = new Date().getTime();
+  const currentEvent = events.find(event => currentTime >= new Date(event.startDate).getTime() && currentTime <= new Date(event.endDate).getTime()) ?? events[events.length - 1];
+  const [ pokemon, setPokemon ] = useState<pokeApi.Pokemon[]>([]);
 
-function Resource(props) {
-	return (
-		<a href={props.href} target="_blank" class="resource">
-			<h2>{props.title}</h2>
-			<p>{props.description}</p>
-		</a>
-	);
+  useEffect(() => {
+    if (currentEvent) {
+      const eventPokemonIds = currentEvent.pokemon.map(pokemon => pokemon.id);
+      const pokemonData = Pokedex.getPokemonByName(eventPokemonIds);
+      pokemonData.then(res => {
+        const updatedPokemon = res.map(p => {
+          return {
+            ...p,
+            regularHundo: currentEvent.pokemon.find(pokemon => pokemon.id === p.id)?.regularHundo ?? 0,
+            weatherHundo: currentEvent.pokemon.find(pokemon => pokemon.id === p.id)?.weatherHundo ?? 0,
+            canBeShiny: currentEvent.pokemon.find(pokemon => pokemon.id === p.id)?.canBeShiny ?? false
+          };
+        });
+        setPokemon(updatedPokemon);
+      });
+    }
+  }, [ currentEvent ]);
+
+  return (
+    <div class="home">
+      <h1>Current Event</h1>
+      <h2>{currentEvent.name}</h2>
+      <h3>Featured Pokemon:</h3>
+      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+        {pokemon.map((p => {
+          return (<>
+            <div>{p.name}</div>
+            <div><img src={p.sprites.front_default} alt={p.name}/></div>
+            <div><strong>Hundo</strong> {p.regularHundo} / {p.weatherHundo}</div>
+          </>);
+        }))}
+      </div>
+    </div>
+  );
 }
