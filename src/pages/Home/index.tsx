@@ -30,16 +30,33 @@ export function Home() {
 
   return (
     <div class="home">
-      <h1>Current Event</h1>
-      <h2>{currentEvent.name}</h2>
-      <h3>Featured Pokemon:</h3>
-      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+      <h1>PGO Hundo!</h1>
+      <h3>Current Event: {currentEvent.name}</h3>
+      <h4>Event Hundos:</h4>
+      <div className="pokemon-list">
         {pokemon.map((p => {
-          return (<>
-            <div>{p.name}</div>
-            <div><img src={p.sprites.front_default} alt={p.name}/></div>
-            <div><strong>Hundo</strong> {p.regularHundo} / {p.weatherHundo}</div>
-          </>);
+          return (
+            <div className="pokemon-item">
+              <h3 className="pokemon-name">{p.name}</h3>
+              <div>
+                <img src={p.sprites.front_default} alt={p.name}/>
+              </div>
+              <div>
+                <h3>
+                  <strong>Hundo:</strong> {p.regularHundo} / {p.weatherHundo}
+                </h3>
+                <div>
+                  <a
+                    href={`https://db.pokemongohub.net/pokemon/${p.id}/iv-chart`}
+                    target="_blank"
+                    rel="noreferrer nofollow"
+                  >
+                    See full IV details
+                  </a>
+                </div>
+              </div>
+            </div>
+          );
         }))}
       </div>
     </div>
