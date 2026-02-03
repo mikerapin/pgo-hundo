@@ -1,17 +1,16 @@
 import './style.css';
-import { getEvents } from '../../hooks/getEvents';
-import { useEffect, useState } from 'preact/hooks';
 import * as pokeApi from 'pokeapi-js-wrapper';
+import { useContext, useEffect, useState } from 'preact/hooks';
 import { ModifiedPokemon } from 'types';
 import { HundoText } from '../../components/HundoText';
 import { PokemonImage } from '../../components/PokemonImage';
+import { SelectEvent } from '../../components/SelectEvent';
+import { CurrentEventContext } from '../../context/EventContext';
 
 export function Home() {
+  const { currentEvent, initialEvent } = useContext(CurrentEventContext);
   const Pokedex = new pokeApi.Pokedex({ cache: true });
-  const { events } = getEvents();
-  const currentTime = new Date().getTime();
-  const currentEvent = events.find(event => currentTime >= new Date(event.startDate).getTime() && currentTime <= new Date(event.endDate).getTime()) ?? events[events.length - 1];
-  const [ pokemon, setPokemon ] = useState<ModifiedPokemon[]>([]);
+  const [pokemon, setPokemon] = useState<ModifiedPokemon[]>([]);
 
   useEffect(() => {
     if (currentEvent) {
@@ -29,12 +28,13 @@ export function Home() {
         setPokemon(updatedPokemon);
       });
     }
-  }, [ currentEvent ]);
+  }, [currentEvent]);
 
   return (
     <div>
       <h1>PGO Hundo!</h1>
-      <h3>Current Event:</h3>
+      {/* TODO: Fix how we decide what text to show here. Next vs Current vs Selected */}
+      <h3>{initialEvent.name === currentEvent.name ? 'Next Event:' : 'Selected Event:'}</h3>
       <h2>{currentEvent.name}</h2>
       <div className="pokemon-list">
         {pokemon.map((p => {
@@ -42,11 +42,11 @@ export function Home() {
             <div className="pokemon-item">
               <h3 className="pokemon-name">{p.name}</h3>
               <div>
-                <PokemonImage pokemon={p}/>
+                <PokemonImage pokemon={p} />
               </div>
               <div>
                 <h3>
-                  <strong>Hundo:</strong> <HundoText pokemon={p}/>
+                  <strong>Hundo:</strong> <HundoText pokemon={p} />
                 </h3>
                 <div>
                   <a
@@ -62,7 +62,7 @@ export function Home() {
           );
         }))}
       </div>
+      <SelectEvent />
     </div>
-  )
-    ;
+  );
 }

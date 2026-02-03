@@ -5,7 +5,7 @@ export interface EventPokemon {
   canBeShiny: boolean;
 }
 
-export interface Event {
+export interface EventData {
   name: string;
   startDate: string;
   endDate: string;
@@ -16,7 +16,7 @@ export interface Event {
   pokemon: EventPokemon[];
 }
 
-export interface EventData {
+export interface EventDataObject {
   lastUpdate: string;
-  events: Event[];
+  events: EventData[];
 }

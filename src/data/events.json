@@ -15,19 +15,21 @@
           "regularHundo": 2042,
           "weatherHundo": 2553,
           "canBeShiny": true,
-          "inTheWild": false
+          "weather": []
         },
         {
           "id": 643,
           "regularHundo": 2307,
           "weatherHundo": 2884,
-          "canBeShiny": true
+          "canBeShiny": true,
+          "weather": []
         },
         {
           "id": 644,
           "regularHundo": 2307,
           "weatherHundo": 2884,
-          "canBeShiny": true
+          "canBeShiny": true,
+          "weather": []
         }
       ]
     },
@@ -44,14 +46,15 @@
           "id": 243,
           "regularHundo": 1972,
           "weatherHundo": 2466,
-          "canBeShiny": true
+          "canBeShiny": true,
+          "weather": []
         }
       ]
     },
     {
-      "name": "Dynamax Ho-Oh Battle Day",
+      "name": "Dynamax Ho-Oh Battle Weekend",
       "startDate": "2026-01-31",
-      "endDate": "2026-01-01",
+      "endDate": "2026-02-01",
       "dmaxEvent": true,
       "gmaxEvent": false,
       "raidEvent": false,
@@ -61,7 +64,39 @@
           "id": 250,
           "regularHundo": 2207,
           "weatherHundo": 0,
-          "canBeShiny": true
+          "canBeShiny": true,
+          "weather": []
+        }
+      ]
+    },
+    {
+      "name": "Dialga and Palkia in 5-star Raid Battles",
+      "startDate": "2026-02-04",
+      "endDate": "2026-02-04",
+      "dmaxEvent": false,
+      "gmaxEvent": false,
+      "raidEvent": true,
+      "shadowRaidEvent": false,
+      "pokemon": [
+        {
+          "id": 483,
+          "regularHundo": 2307,
+          "weatherHundo": 2884,
+          "canBeShiny": true,
+          "weather": [
+            "snowy",
+            "windy"
+          ]
+        },
+        {
+          "id": 484,
+          "regularHundo": 2307,
+          "weatherHundo": 2884,
+          "canBeShiny": true,
+          "weather": [
+            "rainy",
+            "windy"
+          ]
         }
       ]
     }

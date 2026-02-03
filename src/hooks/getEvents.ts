@@ -1,8 +1,8 @@
 import eventsJson from '../data/events.json';
-import { EventData } from '../types/EventData';
+import { EventData, EventDataObject } from '../types/EventData';
 
 export const getEvents = () => {
-  const eventData = eventsJson as EventData;
+  const eventData = eventsJson as EventDataObject;
   const lastUpdate = eventData.lastUpdate;
 
   const events = eventData.events.sort((a, b) => {

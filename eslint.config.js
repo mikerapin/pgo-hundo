@@ -12,6 +12,7 @@ export default defineConfig([
     rules: {
       '@stylistic/jsx-quotes': ['error', 'prefer-single'],
       '@stylistic/object-curly-spacing': ['error', 'always'],
+      'react/jsx-closing-bracket-location': ['error', {selfClosing: 'line-aligned'}],
     },
   },
 ]);
