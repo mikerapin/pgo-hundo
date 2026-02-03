@@ -1,17 +1,26 @@
+.container {
+  margin-top: 2rem;
+  text-align: center;
+}
+
 .pokemon-list {
-	display: flex;
-	justify-content: center;
-	gap: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .pokemon-list h3 {
-	margin-top: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .pokemon-item {
- text-align: center;
+  border: 1px solid;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
 }
 
-.pokemon-name {
-	text-transform: capitalize;
+.pokemon-list .pokemon-name {
+  margin-top: 0.5rem;
+  text-transform: capitalize;
 }
