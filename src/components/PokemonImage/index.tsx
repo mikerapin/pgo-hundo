@@ -8,7 +8,6 @@ export const PokemonImage = ({ pokemon }: { pokemon: ModifiedPokemon }) => {
 
   useEffect(() => {
     setCurrentImage(pokemon.sprites.front_default);
-    console.log(pokemon.sprites);
   }, [pokemon]);
 
   const onMouseOver = (e: TargetedMouseEvent<HTMLImageElement>) => {

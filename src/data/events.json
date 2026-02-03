@@ -99,6 +99,27 @@
           ]
         }
       ]
+    },
+    {
+      "name": "Solgaleo Raid Hour",
+      "startDate": "2026-02-18",
+      "endDate": "2026-02-18",
+      "dmaxEvent": false,
+      "gmaxEvent": false,
+      "raidEvent": true,
+      "shadowRaidEvent": false,
+      "pokemon": [
+        {
+          "id": 791,
+          "regularHundo": 2310,
+          "weatherHundo": 2887,
+          "canBeShiny": false,
+          "weather": [
+            "windy",
+            "snowy"
+          ]
+        }
+      ]
     }
   ]
 }

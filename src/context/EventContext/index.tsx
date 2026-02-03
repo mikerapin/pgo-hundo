@@ -2,6 +2,7 @@ import { createContext, VNode } from 'preact';
 import { useState } from 'preact/hooks';
 import { getEvents } from '../../hooks/getEvents';
 import { EventData } from '../../types/EventData';
+import { getClosestStartDateEvent } from '../../util/time';
 
 interface CurrentEventContextProps {
   initialEvent: EventData | null;
@@ -15,8 +16,7 @@ export const CurrentEventContext = createContext<CurrentEventContextProps>(null)
 
 export const CurrentEventProvider = ({ children }: { children: VNode }) => {
   const { events, lastUpdate } = getEvents();
-  const currentTime = new Date().getTime();
-  const initialEvent = events.find(event => currentTime >= new Date(event.startDate).getTime() && currentTime <= new Date(event.endDate).getTime()) ?? events[events.length - 1];
+  const initialEvent = getClosestStartDateEvent(events);
   const [currentEvent, setCurrentEvent] = useState(initialEvent);
 
   // todo, some kind of timer or mechanism that automatically updates current event based on the current time
