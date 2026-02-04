@@ -20,6 +20,6 @@ export const PokemonImage = ({ pokemon }: { pokemon: ModifiedPokemon }) => {
   };
 
   return (
-    <img onMouseOver={onMouseOver} onMouseLeave={onMouseLeave} src={currentImage} alt={`${pokemon.name}`} />
+    <img style={{width: '150px'}} onMouseOver={onMouseOver} onMouseLeave={onMouseLeave} src={currentImage} alt={`${pokemon.name}`} />
   );
 };

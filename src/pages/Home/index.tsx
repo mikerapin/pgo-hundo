@@ -22,7 +22,8 @@ export function Home() {
             ...p,
             regularHundo: currentEvent.pokemon.find(pokemon => pokemon.id === p.id)?.regularHundo ?? 0,
             weatherHundo: currentEvent.pokemon.find(pokemon => pokemon.id === p.id)?.weatherHundo ?? 0,
-            canBeShiny: currentEvent.pokemon.find(pokemon => pokemon.id === p.id)?.canBeShiny ?? false
+            canBeShiny: currentEvent.pokemon.find(pokemon => pokemon.id === p.id)?.canBeShiny ?? false,
+            weather: currentEvent.pokemon.find(pokemon => pokemon.id === p.id)?.weather ?? []
           } as ModifiedPokemon;
         });
         setPokemon(updatedPokemon);
@@ -40,14 +41,12 @@ export function Home() {
         {pokemon.map((p => {
           return (
             <div className="pokemon-item">
-              <h3 className="pokemon-name">{p.name}</h3>
+              <h2 className="pokemon-name">{p.name}</h2>
               <div>
                 <PokemonImage pokemon={p} />
               </div>
               <div>
-                <h3>
-                  <strong>Hundo:</strong> <HundoText pokemon={p} />
-                </h3>
+                <HundoText pokemon={p} />
                 <div>
                   <a
                     href={`https://db.pokemongohub.net/pokemon/${p.id}/iv-chart`}

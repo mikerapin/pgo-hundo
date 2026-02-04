@@ -1,8 +1,11 @@
+import { Weather } from '../const/weather';
+
 export interface EventPokemon {
   id: number;
   regularHundo: number;
   weatherHundo: number;
   canBeShiny: boolean;
+  weather: Weather[];
 }
 
 export interface EventData {

@@ -16,7 +16,7 @@
 
 .pokemon-item {
   border: 1px solid;
-  padding: 1rem;
+  padding: 2rem 2.5rem;
   border-radius: 10px;
   text-align: center;
 }

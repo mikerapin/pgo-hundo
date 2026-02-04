@@ -8,7 +8,7 @@ export const SelectEvent = () => {
     <div className="grid" style={{ marginTop: '4rem' }}>
       <div />
       <details className="dropdown">
-        <summary>{currentEvent.name}</summary>
+        <summary className="secondary">{currentEvent.name}</summary>
         <ul>
           {events.map(event =>
             <li>

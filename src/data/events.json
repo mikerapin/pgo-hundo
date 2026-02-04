@@ -65,7 +65,10 @@
           "regularHundo": 2207,
           "weatherHundo": 0,
           "canBeShiny": true,
-          "weather": []
+          "weather": [
+            "sunny",
+            "clear"
+          ]
         }
       ]
     },
@@ -84,7 +87,7 @@
           "weatherHundo": 2884,
           "canBeShiny": true,
           "weather": [
-            "snowy",
+            "snow",
             "windy"
           ]
         },
@@ -94,7 +97,7 @@
           "weatherHundo": 2884,
           "canBeShiny": true,
           "weather": [
-            "rainy",
+            "rain",
             "windy"
           ]
         }
@@ -116,7 +119,7 @@
           "canBeShiny": false,
           "weather": [
             "windy",
-            "snowy"
+            "snow"
           ]
         }
       ]
