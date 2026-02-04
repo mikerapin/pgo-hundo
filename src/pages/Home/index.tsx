@@ -2,6 +2,7 @@ import './style.css';
 import * as pokeApi from 'pokeapi-js-wrapper';
 import { useContext, useEffect, useState } from 'preact/hooks';
 import { ModifiedPokemon } from 'types';
+import { Header } from '../../components/Header';
 import { HundoText } from '../../components/HundoText';
 import { PokemonImage } from '../../components/PokemonImage';
 import { CurrentEventContext } from '../../context/EventContext';
@@ -30,36 +31,37 @@ export function Home() {
     }
   }, [currentEvent]);
 
-  return (
-    <div style={{ textAlign: 'center' }}>
-      <h3>Selected Event:</h3>
-      <h2>{currentEvent.name}</h2>
-      <h5>{new Date(currentEvent.startDate).toLocaleDateString()}</h5>
-      <div className="pokemon-list">
-        {pokemon.map((p => {
-          return (
-            <div className="pokemon-item">
-              <h2 className="pokemon-name">{p.name}</h2>
-              <div>
-                <PokemonImage pokemon={p} />
-              </div>
-              <div>
-                <HundoText pokemon={p} />
+  return (<>
+      <Header />
+      <div style={{ textAlign: 'center' }}>
+        <h3>Selected Event:</h3>
+        <h2>{currentEvent.name}</h2>
+        <h5>{new Date(currentEvent.startDate).toLocaleDateString()}</h5>
+        <div className="pokemon-list">
+          {pokemon.map((p => {
+            return (
+              <div className="pokemon-item">
+                <h2 className="pokemon-name">{p.name}</h2>
                 <div>
-                  <a
-                    href={`https://db.pokemongohub.net/pokemon/${p.id}/iv-chart`}
-                    target="_blank"
-                    rel="noreferrer nofollow"
-                  >
-                    See full IV details
-                  </a>
+                  <PokemonImage pokemon={p} />
+                </div>
+                <div>
+                  <HundoText pokemon={p} />
+                  <div>
+                    <a
+                      href={`https://db.pokemongohub.net/pokemon/${p.id}/iv-chart`}
+                      target="_blank"
+                      rel="noreferrer nofollow"
+                    >
+                      See full IV details
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-          );
-        }))}
+            );
+          }))}
+        </div>
       </div>
-
-    </div>
+    </>
   );
 }

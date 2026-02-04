@@ -11,7 +11,6 @@ export function App() {
     <LocationProvider>
       <CurrentEventProvider>
         <main class="container">
-          <Header />
           <Router>
             <Route path="/" component={Home} />
             <Route default component={NotFound} />

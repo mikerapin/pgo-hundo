@@ -1,4 +1,4 @@
-import logo from '../../assets/logo-med.png';
+import { LogoLink } from '../LogoLink';
 import { SelectEvent } from '../SelectEvent';
 
 export const Header = () => {
@@ -7,9 +7,7 @@ export const Header = () => {
       <nav>
         <ul>
           <li>
-            <a href={import.meta.env.BASE_URL}>
-              <img src={logo} style={{ maxHeight: '100px' }} alt="PGO Hundo!" />
-            </a>
+            <LogoLink />
           </li>
         </ul>
         <ul>
