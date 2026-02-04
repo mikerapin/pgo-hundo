@@ -7,7 +7,7 @@ import { PokemonImage } from '../../components/PokemonImage';
 import { CurrentEventContext } from '../../context/EventContext';
 
 export function Home() {
-  const { currentEvent, initialEvent } = useContext(CurrentEventContext);
+  const { currentEvent } = useContext(CurrentEventContext);
   const Pokedex = new pokeApi.Pokedex({ cache: true });
   const [pokemon, setPokemon] = useState<ModifiedPokemon[]>([]);
 
@@ -32,9 +32,9 @@ export function Home() {
 
   return (
     <div style={{ textAlign: 'center' }}>
-      {/* TODO: Fix how we decide what text to show here. Next vs Current vs Selected */}
-      <h3>{initialEvent.name === currentEvent.name ? 'Next Event:' : 'Selected Event:'}</h3>
+      <h3>Selected Event:</h3>
       <h2>{currentEvent.name}</h2>
+      <h5>{new Date(currentEvent.startDate).toLocaleDateString()}</h5>
       <div className="pokemon-list">
         {pokemon.map((p => {
           return (

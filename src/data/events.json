@@ -3,8 +3,8 @@
   "events": [
     {
       "name": "Kyurem Fusion Raid Day",
-      "startDate": "2026-01-10",
-      "endDate": "2026-01-10",
+      "startDate": "2026-01-10 14:00:00",
+      "endDate": "2026-01-10 17:00:00",
       "dmaxEvent": false,
       "gmaxEvent": false,
       "raidEvent": true,
@@ -35,8 +35,8 @@
     },
     {
       "name": "Shadow Raikou Raid Day",
-      "startDate": "2026-01-24",
-      "endDate": "2026-01-24",
+      "startDate": "2026-01-24 14:00:00",
+      "endDate": "2026-01-24 17:00:00",
       "dmaxEvent": false,
       "gmaxEvent": false,
       "raidEvent": false,
@@ -53,8 +53,8 @@
     },
     {
       "name": "Dynamax Ho-Oh Battle Weekend",
-      "startDate": "2026-01-31",
-      "endDate": "2026-02-01",
+      "startDate": "2026-01-31 10:00:00",
+      "endDate": "2026-02-01 20:00:00",
       "dmaxEvent": true,
       "gmaxEvent": false,
       "raidEvent": false,
@@ -74,8 +74,8 @@
     },
     {
       "name": "Dialga and Palkia in 5-star Raid Battles",
-      "startDate": "2026-02-04",
-      "endDate": "2026-02-04",
+      "startDate": "2026-02-04 18:00:00",
+      "endDate": "2026-02-04 19:00:00",
       "dmaxEvent": false,
       "gmaxEvent": false,
       "raidEvent": true,
@@ -105,8 +105,8 @@
     },
     {
       "name": "Solgaleo Raid Hour",
-      "startDate": "2026-02-18",
-      "endDate": "2026-02-18",
+      "startDate": "2026-02-18 18:00:00",
+      "endDate": "2026-02-18 19:00:00",
       "dmaxEvent": false,
       "gmaxEvent": false,
       "raidEvent": true,

@@ -20,7 +20,7 @@ export const SelectEvent = () => {
               onClick={() => setCurrentEvent(event)}
               style={{ textDecoration: isSelectedEvent(event) ? 'underline' : 'none' }}
             >
-              {event.name} | <small>{event.startDate}</small>
+              {event.name} | <small>{new Date(event.startDate).toLocaleDateString()}</small>
             </a>
           </li>
         )}
