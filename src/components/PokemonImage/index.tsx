@@ -4,10 +4,11 @@ import { ModifiedPokemon } from 'types';
 
 export const PokemonImage = ({ pokemon }: { pokemon: ModifiedPokemon }) => {
   const hasShiny = pokemon.canBeShiny && pokemon.sprites.front_shiny;
-  const [currentImage, setCurrentImage] = useState(pokemon.sprites.front_default);
+  const [currentImage, setCurrentImage] = useState('');
 
   useEffect(() => {
-    setCurrentImage(pokemon.sprites.front_default);
+    let image = pokemon.sprites.front_default;
+    setCurrentImage(image);
   }, [pokemon]);
 
   const onMouseOver = (e: TargetedMouseEvent<HTMLImageElement>) => {
@@ -20,6 +21,7 @@ export const PokemonImage = ({ pokemon }: { pokemon: ModifiedPokemon }) => {
   };
 
   return (
-    <img style={{width: '150px'}} onMouseOver={onMouseOver} onMouseLeave={onMouseLeave} src={currentImage} alt={`${pokemon.name}`} />
+    <img style={{ width: '150px', filter: pokemon.shadow ? 'drop-shadow(0 0 36px magenta)' : '' }}
+         onMouseOver={onMouseOver} onMouseLeave={onMouseLeave} src={currentImage} alt={`${pokemon.name}`} />
   );
 };

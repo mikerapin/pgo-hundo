@@ -29,12 +29,12 @@ export function NotFound() {
         <h1>404: Not Found</h1>
         <h3>Who's that Pokémon??</h3>
         <img style={{ height: '275px', filter: `brightness(${cssFilter})` }}
-             src={pokemon.sprites.other['official-artwork'].front_default} alt={pokemon.name}
+             src={pokemon.sprites.other['official-artwork'].front_default} alt={pokemon.species.name}
              onClick={() => {
                setCssFilter(1);
              }} />
         {cssFilter ?
-          <p style={{ marginTop: '1em', textTransform: 'capitalize' }}><em>It's {pokemon.name}!</em></p> :
+          <p style={{ marginTop: '1em', textTransform: 'capitalize' }}><em>It's {pokemon.species.name}!</em></p> :
           <p style={{ marginTop: '1.5em', fontSize: '.75em' }}><em>Click to reveal</em></p>}
       </section>
     </>

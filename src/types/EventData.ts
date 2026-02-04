@@ -2,9 +2,12 @@ import { Weather } from '../const/weather';
 
 export interface EventPokemon {
   id: number;
+  name?: string;
   regularHundo: number;
   weatherHundo: number;
   canBeShiny: boolean;
+  shadow?: boolean;
+  primal?: boolean;
   weather: Weather[];
 }
 
@@ -15,7 +18,6 @@ export interface EventData {
   dmaxEvent: boolean;
   gmaxEvent: boolean;
   raidEvent: boolean;
-  shadowRaidEvent: boolean;
   pokemon: EventPokemon[];
 }
 

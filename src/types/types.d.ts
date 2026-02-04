@@ -5,4 +5,6 @@ export interface ModifiedPokemon extends Pokemon {
   weatherHundo: number;
   canBeShiny: boolean;
   weather: Weather[];
+  primal?: boolean;
+  shadow?: boolean;
 }

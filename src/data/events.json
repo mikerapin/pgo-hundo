@@ -8,7 +8,6 @@
       "dmaxEvent": false,
       "gmaxEvent": false,
       "raidEvent": true,
-      "shadowRaidEvent": false,
       "pokemon": [
         {
           "id": 614,
@@ -40,13 +39,13 @@
       "dmaxEvent": false,
       "gmaxEvent": false,
       "raidEvent": false,
-      "shadowRaidEvent": true,
       "pokemon": [
         {
           "id": 243,
           "regularHundo": 1972,
           "weatherHundo": 2466,
           "canBeShiny": true,
+          "shadow": true,
           "weather": []
         }
       ]
@@ -58,7 +57,6 @@
       "dmaxEvent": true,
       "gmaxEvent": false,
       "raidEvent": false,
-      "shadowRaidEvent": false,
       "pokemon": [
         {
           "id": 250,
@@ -79,7 +77,6 @@
       "dmaxEvent": false,
       "gmaxEvent": false,
       "raidEvent": true,
-      "shadowRaidEvent": false,
       "pokemon": [
         {
           "id": 483,
@@ -110,7 +107,6 @@
       "dmaxEvent": false,
       "gmaxEvent": false,
       "raidEvent": true,
-      "shadowRaidEvent": false,
       "pokemon": [
         {
           "id": 483,
@@ -141,7 +137,6 @@
       "dmaxEvent": false,
       "gmaxEvent": false,
       "raidEvent": true,
-      "shadowRaidEvent": false,
       "pokemon": [
         {
           "id": 791,
@@ -151,6 +146,110 @@
           "weather": [
             "windy",
             "snow"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Road to Kalos Day 1",
+      "startDate": "2026-02-23 18:00:00",
+      "endDate": "2026-02-23 19:00:00",
+      "dmaxEvent": false,
+      "gmaxEvent": false,
+      "raidEvent": true,
+      "pokemon": [
+        {
+          "id": 144,
+          "regularHundo": 1743,
+          "weatherHundo": 2179,
+          "canBeShiny": true,
+          "weather": [
+            "windy",
+            "snow"
+          ]
+        },
+        {
+          "id": 145,
+          "regularHundo": 2015,
+          "weatherHundo": 2519,
+          "canBeShiny": true,
+          "weather": [
+            "windy",
+            "rain"
+          ]
+        },
+        {
+          "id": 146,
+          "regularHundo": 1980,
+          "weatherHundo": 2475,
+          "canBeShiny": true,
+          "weather": [
+            "windy",
+            "sunny"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Road to Kalos Day 2",
+      "startDate": "2026-02-24 18:00:00",
+      "endDate": "2026-02-24 19:00:00",
+      "dmaxEvent": false,
+      "gmaxEvent": false,
+      "raidEvent": false,
+      "pokemon": [
+        {
+          "id": 249,
+          "regularHundo": 2115,
+          "weatherHundo": 2645,
+          "canBeShiny": true,
+          "shadow": true,
+          "weather": [
+            "windy"
+          ]
+        },
+        {
+          "id": 250,
+          "regularHundo": 2207,
+          "weatherHundo": 2759,
+          "canBeShiny": true,
+          "shadow": true,
+          "weather": [
+            "windy",
+            "rain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Road to Kalos Day 3",
+      "startDate": "2026-02-25 18:00:00",
+      "endDate": "2026-02-25 19:00:00",
+      "dmaxEvent": false,
+      "gmaxEvent": false,
+      "raidEvent": true,
+      "pokemon": [
+        {
+          "id": 382,
+          "name": "Kyogre",
+          "regularHundo": 2351,
+          "weatherHundo": 2939,
+          "canBeShiny": true,
+          "primal": true,
+          "weather": [
+            "windy"
+          ]
+        },
+        {
+          "id": 383,
+          "name": "Groudon",
+          "regularHundo": 2351,
+          "weatherHundo": 2939,
+          "canBeShiny": true,
+          "primal": true,
+          "weather": [
+            "windy",
+            "rain"
           ]
         }
       ]

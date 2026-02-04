@@ -5,6 +5,7 @@ import { ModifiedPokemon } from 'types';
 import { Header } from '../../components/Header';
 import { HundoText } from '../../components/HundoText';
 import { PokemonImage } from '../../components/PokemonImage';
+import { PokemonName } from '../../components/PokemonName';
 import { CurrentEventContext } from '../../context/EventContext';
 
 export function Home() {
@@ -14,16 +15,21 @@ export function Home() {
 
   useEffect(() => {
     if (currentEvent) {
-      const eventPokemonIds = currentEvent.pokemon.map(pokemon => pokemon.id);
+      const eventPokemonIds = currentEvent.pokemon.map(pokemon => pokemon.primal ? `${pokemon.name?.toLowerCase() || ''}-primal` : pokemon.id);
       const pokemonData = Pokedex.getPokemonByName(eventPokemonIds);
       pokemonData.then(res => {
-        const updatedPokemon: ModifiedPokemon[] = res.map(p => {
+        const updatedPokemon: ModifiedPokemon[] = res.map(resultPokemon => {
+          const foundPokemon = currentEvent.pokemon.find(eventPokemon => {
+            return resultPokemon.species.url.includes(`/${eventPokemon.id}/`);
+          });
           return {
-            ...p,
-            regularHundo: currentEvent.pokemon.find(pokemon => pokemon.id === p.id)?.regularHundo ?? 0,
-            weatherHundo: currentEvent.pokemon.find(pokemon => pokemon.id === p.id)?.weatherHundo ?? 0,
-            canBeShiny: currentEvent.pokemon.find(pokemon => pokemon.id === p.id)?.canBeShiny ?? false,
-            weather: currentEvent.pokemon.find(pokemon => pokemon.id === p.id)?.weather ?? []
+            ...resultPokemon,
+            regularHundo: foundPokemon?.regularHundo ?? 0,
+            weatherHundo: foundPokemon?.weatherHundo ?? 0,
+            canBeShiny: foundPokemon?.canBeShiny ?? false,
+            weather: foundPokemon?.weather ?? [],
+            primal: foundPokemon?.primal ?? false,
+            shadow: foundPokemon?.shadow ?? false
           } as ModifiedPokemon;
         });
         setPokemon(updatedPokemon);
@@ -38,18 +44,18 @@ export function Home() {
         <h2>{currentEvent.name}</h2>
         <h5>{new Date(currentEvent.startDate).toLocaleDateString()}</h5>
         <div className="pokemon-list">
-          {pokemon.map((p => {
+          {pokemon.map((modifiedPokemon => {
             return (
               <div className="pokemon-item">
-                <h2 className="pokemon-name">{p.name}</h2>
+                <PokemonName pokemon={modifiedPokemon} />
                 <div>
-                  <PokemonImage pokemon={p} />
+                  <PokemonImage pokemon={modifiedPokemon} />
                 </div>
                 <div>
-                  <HundoText pokemon={p} />
+                  <HundoText pokemon={modifiedPokemon} />
                   <div>
                     <a
-                      href={`https://db.pokemongohub.net/pokemon/${p.id}/iv-chart`}
+                      href={`https://db.pokemongohub.net/pokemon/${modifiedPokemon.id}/iv-chart`}
                       target="_blank"
                       rel="noreferrer nofollow"
                     >
