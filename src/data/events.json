@@ -231,7 +231,7 @@
       "pokemon": [
         {
           "id": 382,
-          "name": "Kyogre",
+          "searchKey": "kyogre-primal",
           "regularHundo": 2351,
           "weatherHundo": 2939,
           "canBeShiny": true,
@@ -242,7 +242,7 @@
         },
         {
           "id": 383,
-          "name": "Groudon",
+          "searchKey": "groudon-primal",
           "regularHundo": 2351,
           "weatherHundo": 2939,
           "canBeShiny": true,
@@ -264,7 +264,6 @@
       "pokemon": [
         {
           "id": 483,
-          "name": "Dialga",
           "regularHundo": 2307,
           "weatherHundo": 2884,
           "canBeShiny": true,
@@ -275,10 +274,33 @@
         },
         {
           "id": 484,
-          "name": "Palkia",
           "regularHundo": 2280,
           "weatherHundo": 2850,
           "canBeShiny": true,
+          "weather": [
+            "windy",
+            "rain"
+          ]
+        },
+        {
+          "id": 483,
+          "searchKey": "dialga-origin",
+          "regularHundo": 2307,
+          "weatherHundo": 2884,
+          "canBeShiny": true,
+          "origin": true,
+          "weather": [
+            "windy",
+            "snow"
+          ]
+        },
+        {
+          "id": 484,
+          "searchKey": "palkia-origin",
+          "regularHundo": 2280,
+          "weatherHundo": 2850,
+          "canBeShiny": true,
+          "origin": true,
           "weather": [
             "windy",
             "rain"
@@ -295,28 +317,34 @@
       "raidEvent": true,
       "pokemon": [
         {
-          "id": 483,
-          "name": "Dialga",
+          "id": 643,
           "regularHundo": 2307,
           "weatherHundo": 2884,
           "canBeShiny": true,
-          "origin": true,
-          "weather": [
-            "windy",
-            "snow"
-          ]
+          "weather": ["windy", "sunny"]
         },
         {
-          "id": 484,
-          "name": "Palkia",
-          "regularHundo": 2280,
-          "weatherHundo": 2850,
+          "id": 644,
+          "regularHundo": 2307,
+          "weatherHundo": 2884,
           "canBeShiny": true,
-          "origin": true,
-          "weather": [
-            "windy",
-            "rain"
-          ]
+          "weather": ["windy", "rain"]
+        },
+        {
+          "id": 646,
+          "searchKey": "Kyurem-White",
+          "regularHundo": 2631,
+          "weatherHundo": 3289,
+          "canBeShiny": true,
+          "weather": ["windy", "snow"]
+        },
+        {
+          "id": 646,
+          "searchKey": "Kyurem-Black",
+          "regularHundo": 2631,
+          "weatherHundo": 3289,
+          "canBeShiny": true,
+          "weather": ["windy", "snow"]
         }
       ]
     }

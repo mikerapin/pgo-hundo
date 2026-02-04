@@ -16,13 +16,7 @@ export function Home() {
   useEffect(() => {
     if (currentEvent) {
       const eventPokemonIds = currentEvent.pokemon.map(pokemon => {
-        if (pokemon.primal) {
-          return `${pokemon.name?.toLowerCase() || ''}-primal`;
-        }
-        if (pokemon.origin) {
-          return `${pokemon.name?.toLowerCase() || ''}-origin`;
-        }
-        return pokemon.id;
+        return pokemon.searchKey ? pokemon.searchKey : pokemon.id;
       });
       const pokemonData = Pokedex.getPokemonByName(eventPokemonIds);
       pokemonData.then(res => {

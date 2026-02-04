@@ -2,7 +2,7 @@ import { Weather } from '../const/weather';
 
 export interface EventPokemon {
   id: number;
-  name?: string;
+  searchKey?: string;
   regularHundo: number;
   weatherHundo: number;
   canBeShiny: boolean;
