@@ -12,7 +12,7 @@ export function App() {
       <CurrentEventProvider>
         <main class="container">
           <Router>
-            <Route path="/" component={Home} />
+            <Route path={`${import.meta.env.BASE_URL}/`} component={Home} />
             <Route default component={NotFound} />
           </Router>
         </main>
