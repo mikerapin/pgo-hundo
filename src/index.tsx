@@ -1,4 +1,5 @@
 import { hydrate, LocationProvider, prerender as ssr, Route, Router } from 'preact-iso';
+import { Footer } from './components/Footer';
 import { Header } from './components/Header';
 import { CurrentEventProvider } from './context/EventContext';
 import { NotFound } from './pages/_404.jsx';
@@ -15,6 +16,7 @@ export function App() {
             <Route path={`${import.meta.env.BASE_URL}/`} component={Home} />
             <Route default component={NotFound} />
           </Router>
+          <Footer />
         </main>
       </CurrentEventProvider>
     </LocationProvider>
