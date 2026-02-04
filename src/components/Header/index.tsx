@@ -1,3 +1,4 @@
+import logo from '../../assets/logo-med.png';
 import { SelectEvent } from '../SelectEvent';
 
 export const Header = () => {
@@ -6,8 +7,8 @@ export const Header = () => {
       <nav>
         <ul>
           <li>
-            <a href="/">
-              <img src="/logo-med.png" style={{ maxHeight: '100px' }} alt="PGO Hundo!" />
+            <a href={import.meta.env.BASE_URL}>
+              <img src={logo} style={{ maxHeight: '100px' }} alt="PGO Hundo!" />
             </a>
           </li>
         </ul>
