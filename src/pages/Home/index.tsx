@@ -5,8 +5,8 @@ import { ModifiedPokemon } from 'types';
 import { Header } from '../../components/Header';
 import { HundoText } from '../../components/HundoText';
 import { PokemonImage } from '../../components/PokemonImage';
-import { PokemonName } from '../../components/PokemonName';
 import { CurrentEventContext } from '../../context/EventContext';
+import { getPokemonName } from '../../util/pokemonName';
 
 export function Home() {
   const { currentEvent } = useContext(CurrentEventContext);
@@ -15,7 +15,15 @@ export function Home() {
 
   useEffect(() => {
     if (currentEvent) {
-      const eventPokemonIds = currentEvent.pokemon.map(pokemon => pokemon.primal ? `${pokemon.name?.toLowerCase() || ''}-primal` : pokemon.id);
+      const eventPokemonIds = currentEvent.pokemon.map(pokemon => {
+        if (pokemon.primal) {
+          return `${pokemon.name?.toLowerCase() || ''}-primal`;
+        }
+        if (pokemon.origin) {
+          return `${pokemon.name?.toLowerCase() || ''}-origin`;
+        }
+        return pokemon.id;
+      });
       const pokemonData = Pokedex.getPokemonByName(eventPokemonIds);
       pokemonData.then(res => {
         const updatedPokemon: ModifiedPokemon[] = res.map(resultPokemon => {
@@ -29,7 +37,8 @@ export function Home() {
             canBeShiny: foundPokemon?.canBeShiny ?? false,
             weather: foundPokemon?.weather ?? [],
             primal: foundPokemon?.primal ?? false,
-            shadow: foundPokemon?.shadow ?? false
+            shadow: foundPokemon?.shadow ?? false,
+            origin: foundPokemon?.origin ?? false
           } as ModifiedPokemon;
         });
         setPokemon(updatedPokemon);
@@ -47,7 +56,7 @@ export function Home() {
           {pokemon.map((modifiedPokemon => {
             return (
               <div className="pokemon-item">
-                <PokemonName pokemon={modifiedPokemon} />
+                <h2 className={'pokemon-name'}>{getPokemonName(modifiedPokemon)}</h2>
                 <div>
                   <PokemonImage pokemon={modifiedPokemon} />
                 </div>

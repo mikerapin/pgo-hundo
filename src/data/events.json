@@ -151,7 +151,7 @@
       ]
     },
     {
-      "name": "Road to Kalos Day 1",
+      "name": "Road to Kalos Day 1 Raid Hour",
       "startDate": "2026-02-23 18:00:00",
       "endDate": "2026-02-23 19:00:00",
       "dmaxEvent": false,
@@ -191,7 +191,7 @@
       ]
     },
     {
-      "name": "Road to Kalos Day 2",
+      "name": "Road to Kalos Day 2 Raid Hour",
       "startDate": "2026-02-24 18:00:00",
       "endDate": "2026-02-24 19:00:00",
       "dmaxEvent": false,
@@ -222,7 +222,7 @@
       ]
     },
     {
-      "name": "Road to Kalos Day 3",
+      "name": "Road to Kalos Day 3 Raid Hour",
       "startDate": "2026-02-25 18:00:00",
       "endDate": "2026-02-25 19:00:00",
       "dmaxEvent": false,
@@ -247,6 +247,72 @@
           "weatherHundo": 2939,
           "canBeShiny": true,
           "primal": true,
+          "weather": [
+            "windy",
+            "rain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Road to Kalos Day 4 Raid Hour",
+      "startDate": "2026-02-26 18:00:00",
+      "endDate": "2026-02-26 19:00:00",
+      "dmaxEvent": false,
+      "gmaxEvent": false,
+      "raidEvent": true,
+      "pokemon": [
+        {
+          "id": 483,
+          "name": "Dialga",
+          "regularHundo": 2307,
+          "weatherHundo": 2884,
+          "canBeShiny": true,
+          "weather": [
+            "windy",
+            "snow"
+          ]
+        },
+        {
+          "id": 484,
+          "name": "Palkia",
+          "regularHundo": 2280,
+          "weatherHundo": 2850,
+          "canBeShiny": true,
+          "weather": [
+            "windy",
+            "rain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Road to Kalos Day 5 Raid Hour",
+      "startDate": "2026-02-27 18:00:00",
+      "endDate": "2026-02-27 19:00:00",
+      "dmaxEvent": false,
+      "gmaxEvent": false,
+      "raidEvent": true,
+      "pokemon": [
+        {
+          "id": 483,
+          "name": "Dialga",
+          "regularHundo": 2307,
+          "weatherHundo": 2884,
+          "canBeShiny": true,
+          "origin": true,
+          "weather": [
+            "windy",
+            "snow"
+          ]
+        },
+        {
+          "id": 484,
+          "name": "Palkia",
+          "regularHundo": 2280,
+          "weatherHundo": 2850,
+          "canBeShiny": true,
+          "origin": true,
           "weather": [
             "windy",
             "rain"

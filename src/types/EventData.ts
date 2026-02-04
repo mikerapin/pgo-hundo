@@ -8,6 +8,7 @@ export interface EventPokemon {
   canBeShiny: boolean;
   shadow?: boolean;
   primal?: boolean;
+  origin?: boolean;
   weather: Weather[];
 }
 

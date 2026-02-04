@@ -7,4 +7,5 @@ export interface ModifiedPokemon extends Pokemon {
   weather: Weather[];
   primal?: boolean;
   shadow?: boolean;
+  origin?: boolean;
 }

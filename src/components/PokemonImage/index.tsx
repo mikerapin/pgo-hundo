@@ -1,6 +1,7 @@
 import { TargetedMouseEvent } from 'preact';
 import { useEffect, useState } from 'preact/hooks';
 import { ModifiedPokemon } from 'types';
+import { getPokemonName } from '../../util/pokemonName';
 
 export const PokemonImage = ({ pokemon }: { pokemon: ModifiedPokemon }) => {
   const hasShiny = pokemon.canBeShiny && pokemon.sprites.front_shiny;
@@ -22,6 +23,6 @@ export const PokemonImage = ({ pokemon }: { pokemon: ModifiedPokemon }) => {
 
   return (
     <img style={{ width: '150px', filter: pokemon.shadow ? 'drop-shadow(0 0 36px magenta)' : '' }}
-         onMouseOver={onMouseOver} onMouseLeave={onMouseLeave} src={currentImage} alt={`${pokemon.name}`} />
+         onMouseOver={onMouseOver} onMouseLeave={onMouseLeave} src={currentImage} alt={`${getPokemonName(pokemon)}`} />
   );
 };
