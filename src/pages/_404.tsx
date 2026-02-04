@@ -36,7 +36,6 @@ export function NotFound() {
         {cssFilter ?
           <p style={{ marginTop: '1em', textTransform: 'capitalize' }}><em>It's {pokemon.name}!</em></p> :
           <p style={{ marginTop: '1.5em', fontSize: '.75em' }}><em>Click to reveal</em></p>}
-
       </section>
     </>
   );
