@@ -30,3 +30,6 @@ jobs:
 
       - name: Build assets
         run: npm run build
+
+      - name: Delete index.html
+        run: rm index.html
