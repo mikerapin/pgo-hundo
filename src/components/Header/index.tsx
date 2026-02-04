@@ -5,7 +5,7 @@ export const Header = () => {
     <header>
       <nav>
         <ul>
-          <li><h1>PGO Hundo!</h1></li>
+          <li><img src="logo-med.png" style={{maxHeight: '120px'}} alt="PGO Hundo!" /></li>
         </ul>
         <ul>
           <li><SelectEvent /></li>
