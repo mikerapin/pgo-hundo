@@ -4,7 +4,6 @@ import { useContext, useEffect, useState } from 'preact/hooks';
 import { ModifiedPokemon } from 'types';
 import { HundoText } from '../../components/HundoText';
 import { PokemonImage } from '../../components/PokemonImage';
-import { SelectEvent } from '../../components/SelectEvent';
 import { CurrentEventContext } from '../../context/EventContext';
 
 export function Home() {
@@ -32,8 +31,7 @@ export function Home() {
   }, [currentEvent]);
 
   return (
-    <div>
-      <h1>PGO Hundo!</h1>
+    <div style={{ textAlign: 'center' }}>
       {/* TODO: Fix how we decide what text to show here. Next vs Current vs Selected */}
       <h3>{initialEvent.name === currentEvent.name ? 'Next Event:' : 'Selected Event:'}</h3>
       <h2>{currentEvent.name}</h2>
@@ -61,7 +59,7 @@ export function Home() {
           );
         }))}
       </div>
-      <SelectEvent />
+
     </div>
   );
 }

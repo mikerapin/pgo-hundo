@@ -1,4 +1,5 @@
 import { hydrate, LocationProvider, prerender as ssr, Route, Router } from 'preact-iso';
+import { Header } from './components/Header';
 import { CurrentEventProvider } from './context/EventContext';
 import { NotFound } from './pages/_404.jsx';
 
@@ -10,6 +11,7 @@ export function App() {
     <LocationProvider>
       <CurrentEventProvider>
         <main class="container">
+          <Header />
           <Router>
             <Route path="/" component={Home} />
             <Route default component={NotFound} />
