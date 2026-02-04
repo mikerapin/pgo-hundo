@@ -104,6 +104,37 @@
       ]
     },
     {
+      "name": "Dialga and Palkia in 5-star Raid Battles",
+      "startDate": "2026-02-11 18:00:00",
+      "endDate": "2026-02-11 19:00:00",
+      "dmaxEvent": false,
+      "gmaxEvent": false,
+      "raidEvent": true,
+      "shadowRaidEvent": false,
+      "pokemon": [
+        {
+          "id": 483,
+          "regularHundo": 2307,
+          "weatherHundo": 2884,
+          "canBeShiny": true,
+          "weather": [
+            "snow",
+            "windy"
+          ]
+        },
+        {
+          "id": 484,
+          "regularHundo": 2307,
+          "weatherHundo": 2884,
+          "canBeShiny": true,
+          "weather": [
+            "rain",
+            "windy"
+          ]
+        }
+      ]
+    },
+    {
       "name": "Solgaleo Raid Hour",
       "startDate": "2026-02-18 18:00:00",
       "endDate": "2026-02-18 19:00:00",

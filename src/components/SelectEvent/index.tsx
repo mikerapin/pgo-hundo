@@ -6,7 +6,7 @@ import { EventData } from '../../types/EventData';
 export const SelectEvent = () => {
   const { currentEvent, setCurrentEvent, events } = useContext(CurrentEventContext);
 
-  const isSelectedEvent = (event: EventData) => event.name === currentEvent?.name;
+  const isSelectedEvent = (event: EventData) => event.name === currentEvent?.name && event.startDate === currentEvent?.startDate;
 
   return (
     <details className="dropdown">
