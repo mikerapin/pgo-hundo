@@ -6,6 +6,7 @@ export default defineConfig(({ command }) => {
   if (command === 'build') {
     baseUrl = '/pgo-hundo/';
   }
+  console.log('setting base url to: ', baseUrl)
   return {
     base: baseUrl,
     plugins: [
