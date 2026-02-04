@@ -5,7 +5,11 @@ export const Header = () => {
     <header>
       <nav>
         <ul>
-          <li><img src="logo-med.png" style={{maxHeight: '120px'}} alt="PGO Hundo!" /></li>
+          <li>
+            <a href="/">
+              <img src="/logo-med.png" style={{ maxHeight: '100px' }} alt="PGO Hundo!" />
+            </a>
+          </li>
         </ul>
         <ul>
           <li><SelectEvent /></li>
