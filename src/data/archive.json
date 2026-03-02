@@ -68,6 +68,337 @@
           ]
         }
       ]
+    },
+    {
+      "name": "Dialga and Palkia in 5-star Raid Battles",
+      "startDate": "2026-02-04 18:00:00",
+      "endDate": "2026-02-04 19:00:00",
+      "dmaxEvent": false,
+      "gmaxEvent": false,
+      "raidEvent": true,
+      "pokemon": [
+        {
+          "id": 483,
+          "regularHundo": 2307,
+          "weatherHundo": 2884,
+          "canBeShiny": true,
+          "weather": [
+            "snow",
+            "windy"
+          ]
+        },
+        {
+          "id": 484,
+          "regularHundo": 2307,
+          "weatherHundo": 2884,
+          "canBeShiny": true,
+          "weather": [
+            "rain",
+            "windy"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Dialga and Palkia in 5-star Raid Battles",
+      "startDate": "2026-02-11 18:00:00",
+      "endDate": "2026-02-11 19:00:00",
+      "dmaxEvent": false,
+      "gmaxEvent": false,
+      "raidEvent": true,
+      "pokemon": [
+        {
+          "id": 483,
+          "regularHundo": 2307,
+          "weatherHundo": 2884,
+          "canBeShiny": true,
+          "weather": [
+            "snow",
+            "windy"
+          ]
+        },
+        {
+          "id": 484,
+          "regularHundo": 2307,
+          "weatherHundo": 2884,
+          "canBeShiny": true,
+          "weather": [
+            "rain",
+            "windy"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Solgaleo Raid Hour",
+      "startDate": "2026-02-18 18:00:00",
+      "endDate": "2026-02-18 19:00:00",
+      "dmaxEvent": false,
+      "gmaxEvent": false,
+      "raidEvent": true,
+      "pokemon": [
+        {
+          "id": 791,
+          "regularHundo": 2310,
+          "weatherHundo": 2887,
+          "canBeShiny": false,
+          "weather": [
+            "windy",
+            "snow"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Road to Kalos Day 1 Raid Hour",
+      "startDate": "2026-02-23 18:00:00",
+      "endDate": "2026-02-23 19:00:00",
+      "dmaxEvent": false,
+      "gmaxEvent": false,
+      "raidEvent": true,
+      "pokemon": [
+        {
+          "id": 144,
+          "regularHundo": 1743,
+          "weatherHundo": 2179,
+          "canBeShiny": true,
+          "weather": [
+            "windy",
+            "snow"
+          ]
+        },
+        {
+          "id": 145,
+          "regularHundo": 2015,
+          "weatherHundo": 2519,
+          "canBeShiny": true,
+          "weather": [
+            "windy",
+            "rain"
+          ]
+        },
+        {
+          "id": 146,
+          "regularHundo": 1980,
+          "weatherHundo": 2475,
+          "canBeShiny": true,
+          "weather": [
+            "windy",
+            "sunny"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Road to Kalos Day 2 Raid Hour",
+      "startDate": "2026-02-24 18:00:00",
+      "endDate": "2026-02-24 19:00:00",
+      "dmaxEvent": false,
+      "gmaxEvent": false,
+      "raidEvent": false,
+      "pokemon": [
+        {
+          "id": 249,
+          "regularHundo": 2115,
+          "weatherHundo": 2645,
+          "canBeShiny": true,
+          "shadow": true,
+          "weather": [
+            "windy"
+          ]
+        },
+        {
+          "id": 250,
+          "regularHundo": 2207,
+          "weatherHundo": 2759,
+          "canBeShiny": true,
+          "shadow": true,
+          "weather": [
+            "windy",
+            "rain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Road to Kalos Day 3 Raid Hour",
+      "startDate": "2026-02-25 18:00:00",
+      "endDate": "2026-02-25 19:00:00",
+      "dmaxEvent": false,
+      "gmaxEvent": false,
+      "raidEvent": true,
+      "pokemon": [
+        {
+          "id": 382,
+          "searchKey": "kyogre-primal",
+          "regularHundo": 2351,
+          "weatherHundo": 2939,
+          "canBeShiny": true,
+          "primal": true,
+          "weather": [
+            "windy"
+          ]
+        },
+        {
+          "id": 383,
+          "searchKey": "groudon-primal",
+          "regularHundo": 2351,
+          "weatherHundo": 2939,
+          "canBeShiny": true,
+          "primal": true,
+          "weather": [
+            "windy",
+            "rain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Road to Kalos Day 4 Raid Hour",
+      "startDate": "2026-02-26 18:00:00",
+      "endDate": "2026-02-26 19:00:00",
+      "dmaxEvent": false,
+      "gmaxEvent": false,
+      "raidEvent": true,
+      "pokemon": [
+        {
+          "id": 483,
+          "regularHundo": 2307,
+          "weatherHundo": 2884,
+          "canBeShiny": true,
+          "weather": [
+            "windy",
+            "snow"
+          ]
+        },
+        {
+          "id": 484,
+          "regularHundo": 2280,
+          "weatherHundo": 2850,
+          "canBeShiny": true,
+          "weather": [
+            "windy",
+            "rain"
+          ]
+        },
+        {
+          "id": 483,
+          "searchKey": "dialga-origin",
+          "regularHundo": 2307,
+          "weatherHundo": 2884,
+          "canBeShiny": true,
+          "origin": true,
+          "weather": [
+            "windy",
+            "snow"
+          ]
+        },
+        {
+          "id": 484,
+          "searchKey": "palkia-origin",
+          "regularHundo": 2280,
+          "weatherHundo": 2850,
+          "canBeShiny": true,
+          "origin": true,
+          "weather": [
+            "windy",
+            "rain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Road to Kalos Day 5 Raid Hour",
+      "startDate": "2026-02-27 18:00:00",
+      "endDate": "2026-02-27 19:00:00",
+      "dmaxEvent": false,
+      "gmaxEvent": false,
+      "raidEvent": true,
+      "pokemon": [
+        {
+          "id": 643,
+          "regularHundo": 2307,
+          "weatherHundo": 2884,
+          "canBeShiny": true,
+          "weather": [
+            "windy",
+            "sunny"
+          ]
+        },
+        {
+          "id": 644,
+          "regularHundo": 2307,
+          "weatherHundo": 2884,
+          "canBeShiny": true,
+          "weather": [
+            "windy",
+            "rain"
+          ]
+        },
+        {
+          "id": 646,
+          "searchKey": "Kyurem-White",
+          "regularHundo": 2631,
+          "weatherHundo": 3289,
+          "canBeShiny": true,
+          "weather": [
+            "windy",
+            "snow"
+          ]
+        },
+        {
+          "id": 646,
+          "searchKey": "Kyurem-Black",
+          "regularHundo": 2631,
+          "weatherHundo": 3289,
+          "canBeShiny": true,
+          "weather": [
+            "windy",
+            "snow"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Therian Forme Enamorus Raid Day",
+      "startDate": "2026-02-14 14:00:00",
+      "endDate": "2026-02-14 17:00:00",
+      "dmaxEvent": false,
+      "gmaxEvent": false,
+      "raidEvent": true,
+      "pokemon": [
+        {
+          "id": 905,
+          "searchKey": "enamorus-therian",
+          "regularHundo": 1935,
+          "weatherHundo": 2420,
+          "canBeShiny": false,
+          "weather": [
+            "cloudy",
+            "windy"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gigantamax Meowth Max Battle Day",
+      "startDate": "2026-02-15 14:00:00",
+      "endDate": "2026-02-15 17:00:00",
+      "dmaxEvent": false,
+      "gmaxEvent": true,
+      "raidEvent": false,
+      "pokemon": [
+        {
+          "id": 52,
+          "searchKey": "Meowth-gmax",
+          "regularHundo": 427,
+          "weatherHundo": 534,
+          "canBeShiny": false,
+          "weather": [
+            "cloudy"
+          ]
+        }
+      ]
     }
   ]
 }
